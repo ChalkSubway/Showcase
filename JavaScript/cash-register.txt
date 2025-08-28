@@ -1,0 +1,46 @@
+const bill = [1, 5, 10, 25, 100, 500, 1000, 2000, 10000]
+
+function checkCashRegister(price, cash, cid) {  
+  //lav om til cent (regner i heltal)
+  let resterende = (cash-price)*100; 
+  const cidCent = cid.map((item, i) => [item[0], item[1]*100]);
+  const pengeIKassen = cidCent.reduce((acc, curr) => acc+curr[1],0);
+  //hvis vi ikke har nok penge i kassen
+  if((pengeIKassen-resterende)<0){
+    return {status: "INSUFFICIENT_FUNDS", change: []};
+  }
+  //hvis der er præcis den mængde penge i kassen
+  if((pengeIKassen-resterende)===0){
+    return {status: "CLOSED", change: cid}
+  }
+  console.log(pengeIKassen-resterende)
+
+
+  const returArr = [];
+  console.log(cidCent)
+  //gå gennem skuffen fra højeste til laveste
+  for (let i=cidCent.length-1; i>=0; i--){
+    const pengeNavn = cidCent[i][0];
+    const pengeTotal = cidCent[i][1];
+    const pengeValue = bill[i];
+
+    //hvor mange af den nuværende kan vi bruge
+    const max = Math.floor(resterende/pengeValue);
+    const available = Math.floor(pengeTotal/pengeValue);
+    const enhederTilBrug = Math.min(max,available);
+    const valutaTilBrug = enhederTilBrug*pengeValue;
+
+    if(enhederTilBrug>0){
+      returArr.push([pengeNavn, valutaTilBrug/100])
+      resterende -= valutaTilBrug;
+    }
+  }
+  //hvis der ikke skal retuneres flere penge
+  if(resterende===0){
+    return {status: "OPEN", change: [...returArr]};
+  }
+  //hvis du ikke kan give det præcise tilbage i byttepenge
+  return {status: "INSUFFICIENT_FUNDS", change: []}
+}
+
+checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);

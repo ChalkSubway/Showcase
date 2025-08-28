@@ -1,0 +1,15 @@
+function palindrome(str) {
+  //a regex that matches all alphanumeric characters and numbers
+  const regex = /[a-z0-9]+/ig 
+  
+  //uses regex to find a string with on alphanumerics and numbers
+  let word = str.toLowerCase().match(regex).join("");
+
+  //reverse the word
+  let reverse = word.split("").reverse().join("");
+  console.log(reverse);
+
+  //check if it's a palindrome
+  return word===reverse
+}
+palindrome("eye");

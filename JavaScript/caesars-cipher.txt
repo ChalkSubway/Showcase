@@ -1,0 +1,15 @@
+//A ROT13 cipher der erstatter bogstaver med det der kommer 13 pladser efter dem
+function rot13(str) {
+//erstatter alle store bogstaver
+  return str.replace(/[A-Z]/g, (match) => {
+    let char = match.charCodeAt(0)
+    //returns the character from char code
+    //if the statement is true it minuses otherwhise it adds
+    return String.fromCharCode(
+      char-13 >= 65
+      ? char-13
+      : char+13
+      )
+  })
+}
+rot13("SERR PBQR PNZC");
