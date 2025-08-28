@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Loops and iteration</title>
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>
+      Loops and iteration
+    </header>
+    <ul id="Navbar-list">
+  <li><a class="nav-link" href="#introduction">Introduction</a></li>
+  <li><a class="nav-link" href="#for_statement">for statement</a></li>
+  <li><a class="nav-link" href="#do...while_statement">do...while statement</a></li>
+  <li><a class="nav-link" href="#while_statement">while statement</a></li>
+  <li><a class="nav-link" href="#labeled_statement">labeled statement</a></li>
+  <li><a class="nav-link" href="#break_statement">break statement</a></li>
+  <li><a class="nav-link" href="#reference">Reference</a></li>
+  </ul>
+  </nav>
+<main id="main-doc">
+  <section class="main-section" id="introduction">
+    <header>Introduction</header>
+    <p class="section-text">Loops offer a quick and easy way to do something repeatedly. This chapter of the JavaScript Guide introduces the different iteration statements available to JavaScript.</p>
+<p class="section-text">
+You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction, then Y steps in another. For example, the idea "Go five steps to the east" could be expressed this way as a loop:</p>
+<pre><code id="code-introduction" class="language-javascript">for (let step = 0; step < 5; step++) {
+  // Runs 5 times, with values of step 0 through 4.
+  console.log("Walking east one step");
+}
+</code></pre>
+<p class="section-text">There are many different kinds of loops, but they all essentially do the same thing: they repeat an action some number of times. (Note that it's possible that number could be zero!)</p>
+<p class="section-text">The various loop mechanisms offer different ways to determine the start and end points of the loop. There are various situations that are more easily served by one type of loop over the others.</p>
+<p class="section-text">The statements for loops provided in JavaScript are:</p>
+  </section>
+  <section class="main-section" id="for_statement">
+    <header>for statement</header>
+    <p class="section-text">A for loop repeats until a specified condition evaluates to false. The JavaScript for loop is similar to the Java and C for loop.</p>
+    <p class="section-text">A for statement looks as follows:</p>
+    <pre><code id="code-for-loop" class="language-javascript">for (initialization; condition; afterthought)
+  statement</code></pre>
+    <p class="section-text">When a for loop executes, the following occurs:</p>
+    <ol id="for-loop-steps">
+      <li>The initializing expression initialization, if any, is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.</li>
+      <li>The condition expression is evaluated. If the value of condition is true, the loop statements execute. Otherwise, the for loop terminates. (If the condition expression is omitted entirely, the condition is assumed to be true.)</li>
+      <li>The statement executes. To execute multiple statements, use a block statement ({ }) to group those statements.</li>
+      <li>If present, the update expression afterthought is executed.</li>
+      <li>Control returns to Step 2.</li>
+    </ol>
+
+  </section>
+  <section class="main-section" id="do...while_statement">
+    <header>do...while statement</header>
+    <p class="section-text">The do...while statement repeats until a specified condition evaluates to false.</p>
+    <p class="section-text">A do...while statement looks as follows:</p>
+    <pre><code id="code-do-while-statement" class="language-javascript">do
+  statement
+while (condition);
+</code></pre>
+    <p class="section-text">statement is always executed once before the condition is checked. (To execute multiple statements, use a block statement ({ }) to group those statements.)</p>
+    <p class="section-text">If condition is true, the statement executes again. At the end of every execution, the condition is checked. When the condition is false, execution stops, and control passes to the statement following do...while.</p>
+  </section>
+  <section class="main-section" id="while_statement">
+    <header>while statement</header>
+    <p class="section-text">A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:</p>
+    <pre><code id="code-while-statement" class="language-javascript">while (condition)
+  statement</code></pre>
+    <p class="section-text">If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.</p>
+    <p class="section-text">The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops, and control is passed to the statement following while.</p>
+    <p class="section-text">The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops, and control is passed to the statement following while.</p>
+    <p class="section-text">To execute multiple statements, use a block statement ({ }) to group those statements.</p>
+  </section>
+
+  <section class="main-section" id="labeled_statement">
+    <header>labeled statement</header>
+    <p class="section-text">A label provides a statement with an identifier that lets you refer to it elsewhere in your program. For example, you can use a label to identify a loop, and then use the break or continue statements to indicate whether a program should interrupt the loop or continue its execution.</p>
+    <p class="section-text">The syntax of the labeled statement looks like the following:</p>
+    <pre><code id="code-labeled-statement" class="language-javascript">label:
+  statement</code></pre>
+    <p class="section-text">The value of label may be any JavaScript identifier that is not a reserved word. The statement that you identify with a label may be any statement. For examples of using labeled statements, see the examples of break and continue below.</p>
+  </section>
+  
+  <section class="main-section" id="break_statement">
+    <header>break statement</header>
+    <p class="section-text">Use the break statement to terminate a loop, switch, or in conjunction with a labeled statement.</p>
+    <ul id="break-statement-steps">
+      <li>When you use break without a label, it terminates the innermost enclosing while, do-while, for, or switch immediately and transfers control to the following statement.</li>
+      <li>When you use break with a label, it terminates the specified labeled statement.</li>
+    </ul>
+    <p class="section-text">The syntax of the break statement looks like this:</p>
+    <pre><code id="code-break-label" class="language-javascript">break;
+break label;</code></pre>
+    <ol id="break-code-explaination-steps">
+      <li>The first form of the syntax terminates the innermost enclosing loop or switch.</li>
+      <li>The second form of the syntax terminates the specified enclosing labeled statement.</li>
+    </ol>
+  </section>
+  <section class="main-section" id="reference">
+    <header>Reference</header>
+    <ul id="reference-list">
+      <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement" target="_blank">MDN</a></li>
+    </ul>
+  </section>
+</main>
+
+</body>
+</html>
