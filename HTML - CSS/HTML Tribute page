@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="head">
+    <meta charset="UTF-8"/>
+    <title>Kagens Oprindelse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body id="body">
+    <main id="main">
+    <h1 id="title">The Origin Of Cake</h1>
+    <p id="h1-p">Cakes history is both long and fascinatig</p>
+    <div id="img-div">
+      <img id="image" src="https://cdn.pixabay.com/photo/2016/02/29/00/19/cake-1227842_1280.jpg" alt="a piece of chocolate cake with filling"/>
+      <figcaption id="img-caption">Who doesn't love cake?</figcaption>
+    </div>
+    <section id="tribute-info">
+      <h2>Here's a time line of cakes origin</h2>
+     <ul class="cake-origin-list">
+  <li class="cake-origin-item ancient-egypt">
+    <strong>Ancient Egypt:</strong>
+    <ul class="cake-origin-sublist">
+      <li>Early forms of cake were more like bread, sweetened with honey and flavored with nuts or dried fruits.</li>
+      <li>Often used in religious rituals and offerings.</li>
+    </ul>
+  </li>
+  <li class="cake-origin-item ancient-greece">
+    <strong>Ancient Greece:</strong>
+    <ul class="cake-origin-sublist">
+      <li>Made cheesecakes using simple ingredients like flour, honey, and cheese.</li>
+      <li>Cakes were sometimes shaped like the moon and offered to Artemis, the moon goddess.</li>
+    </ul>
+  </li>
+  <li class="cake-origin-item ancient-rome">
+    <strong>Ancient Rome:</strong>
+    <ul class="cake-origin-sublist">
+      <li>Developed more complex cakes using eggs and butter.</li>
+      <li>Often made small honey cakes to celebrate special occasions.</li>
+    </ul>
+  </li>
+  <li class="cake-origin-item middle-ages">
+    <strong>Middle Ages (Europe):</strong>
+    <ul class="cake-origin-sublist">
+      <li>Cakes were dense and bread-like, sweetened with dried fruits and spices.</li>
+      <li>Reserved for celebrations due to the high cost of ingredients.</li>
+    </ul>
+  </li>
+  <li class="cake-origin-item seventeenth-century">
+    <strong>17th Century (Europe):</strong>
+    <ul class="cake-origin-sublist">
+      <li>Introduction of round cake molds and icing.</li>
+      <li>Sugar became more widely available due to colonial trade.</li>
+    </ul>
+  </li>
+  <li class="cake-origin-item eighteenth-century">
+    <strong>18th Century (Industrial Revolution):</strong>
+    <ul class="cake-origin-sublist">
+      <li>Development of refined flour and baking powder made lighter cakes possible.</li>
+      <li>Cakes became more accessible to the middle class.</li>
+    </ul>
+  </li>
+  <li class="cake-origin-item nineteenth-century">
+    <strong>19th Century:</strong>
+    <ul class="cake-origin-sublist">
+      <li>The layered and frosted cake as we know it today emerged.</li>
+      <li>Victorian-era cakes became centerpiece desserts for special occasions.</li>
+    </ul>
+  </li>
+  <li class="cake-origin-item twentieth-century-present">
+    <strong>20th Century to Present:</strong>
+    <ul class="cake-origin-sublist">
+      <li>Cakes became a staple for birthdays, weddings, and holidays.</li>
+      <li>Mass production and cake mixes made baking easy and popular worldwide.</li>
+      <li>Global influences led to a wide variety of cake styles and flavors.</li>
+    </ul>
+  </li>
+</ul>
+
+      
+      <a id="tribute-link" href="https://www.google.com" target="_blank">Find opskrifter her</a>
+    </section>
+    </main>
+  </body>
