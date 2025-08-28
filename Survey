@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+  <title></title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+  <h1 id="title">Title</h1>
+  <p id="description">Description<p>
+
+    <!-- form needs action and href -->
+  <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
+    <fieldset>
+    <label id="name-label" for="name">Name: <input id="name" type="text" placeholder="Mette" required/></label>
+    <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="email@email.com" required/></label>
+
+    <label for="number" id="number-label">Age: <input id="number" type="number" min="2" max="130" placeholder="2"/></label>
+
+    <label id="dropdown-label" for="dropdown">Dropdown: 
+      <select id="dropdown">
+        <option>Kage</option>
+        <option>Mere Kage</option>
+      </select>
+    </label>
+</fieldset>
+
+<fieldset>
+  <p>Ja eller nej?</p>
+  <label for="radio-button1">ja: <input class="inline" id="radio-button1" type="radio" name="radio" checked value="1"/></label>
+  <label for="radio-button2">nej: <input class="inline" id="radio-button2" type="radio" name="radio" value="2"/></label>
+</fieldset>
+
+<fieldset>
+  <label for="checkbox1">Front-end Projects<input class="inline" id="checkbox1" type="checkbox" value="1"/></label>
+  <label for="checkbox1">Back-end Projects<input class="inline" id="checkbox1" type="checkbox" value="2"/></label>
+  <label for="checkbox1">Data Visualization<input class="inline" id="checkbox1" type="checkbox" value="3"/></label>
+  <label for="checkbox1">Challenges<input class="inline" id="checkbox1" type="checkbox" value="4"/></label>
+ </fieldset>
+<fieldset>
+  <p>Any comments or suggestions?</p>
+  <label for="comment"><textarea id="comment"></textarea></label>
+</fieldset>
+<input id="submit" type="submit" />
+  </form>
+  </body>
+<html>
