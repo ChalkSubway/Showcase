@@ -1,0 +1,62 @@
+h1, #h1-p{
+  text-align: center;
+  
+}
+#h1-p{
+  font-weight: bold;
+}
+
+body {
+  max-width: 2000px;
+  background-color: #e0c097;
+  font-family: 'Georgia', serif;
+  color: #333333;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  margin: 30px auto 5px;
+  
+  object-fit: cover;
+}
+
+#img-div {
+  display: grid;
+  background-color: #f3e5c3;
+  margin: 0 20px;
+  padding: 0 30px;
+}
+
+#img-caption {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+section {
+  text-align: center;
+}
+
+ul {
+  max-width:550px;
+  margin: 0 auto 10px auto;
+  text-align: left;
+  line-height: 1.5;
+  
+  
+}
+
+.cake-origin-list {
+  list-style: none; /* Removes default bullets */
+}
+
+.cake-origin-sublist > li {
+  list-style: none; /* Removes default bullets */
+  padding-left: 0;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/5717/5717439.png);
+  background-size: 16px 16px;  /* Adjust size */
+  background-repeat: no-repeat;
+  background-position: 0 5px;  /* Adjust vertical alignment */
+  padding-left: 24px;          /* Space for icon */
+  margin-bottom: 8px;
+}
